@@ -1,0 +1,104 @@
+h1{
+	text-align: center;
+}
+/* To center your marker on the page, set its 
+margin property to auto. This sets margin-top, 
+margin-right, margin-bottom, and margin-left all 
+to auto 
+*/
+
+/* When the shorthand margin property has two values, 
+it sets margin-top and margin-bottom to the first value,
+and margin-left and margin-right to the second value 
+*/
+
+/* Multiple classes can be added to an element by 
+listing them in the class attribute and separating them
+with a space. For example, the following adds both the 
+animal and dog classes to a div element.
+
+	 <div class="animal dog"> 
+*/
+
+.marker{
+	height:25px;
+	width:200px;
+	margin: 10px auto;
+}
+/*
+There are three more tertiary colors: chartreuse green (green + yellow), azure (blue + cyan), and rose (red + magenta).
+
+To create chartreuse green, update the rgb function in the .one rule so that red is at 127, and set green to the max value.
+
+For azure, update the rgb function in the .two rule so that green is at 127 and blue is at the max value.
+
+And for rose, which is sometimes called bright pink, update the rgb function in the .three rule so that blue is at 127 and red is at the max value.
+*/
+
+/* The CSS hsl function accepts 3 values: a number from 
+0 to 360 for hue, a percentage from 0 to 100 for 
+saturation, and a percentage from 0 to 100 for lightness.
+ */
+
+/*
+	linear-gradient(gradientDirection, color1, color2, ...);
+*/
+
+/* Color-stops allow you to fine-tune where colors are placed along the gradient line. They are a length unit like px or percentages that follow a color in the linear-gradient function 
+	linear-gradient(90deg, red 90%, black);
+*/
+
+.red{
+	background:linear-gradient(rgb(122,74,14)0%,rgb(245,62,113)50%,rgb(162,27,27)100%);
+	box-shadow: 0 0 20px 0 rgba(83,14,14,0.8);
+}
+
+.green{
+	background:linear-gradient(#55680D, #71F53E, #116C31);
+	box-shadow: 0 0 20px 0 #3B7E20CC;
+}
+
+.blue{
+	background: linear-gradient(hsl(186, 76%, 16%),hsl(223,90%,60%),hsl(240,56%,42%));
+	box-shadow: 0 0 20px 0 hsla(223,59%,31%,0.8);
+}
+/* A function is a piece of code that can take an input 
+and perform a specific action. The CSS rgb function 
+accepts values, or arguments, for red, green, and blue, 
+and produces a color: 
+
+	rgb(red, green, blue);
+*/
+.container{
+	background-color: rgb(255,255,255);
+	padding: 10px 0;
+}
+/* With the CSS opacity property, you can control how opaque or transparent an element is. With the value 0, or 0%, the element will be completely transparent, and at 1.0, or 100%, the element will be completely opaque like it is by default. */
+/* Another way to set the opacity for an element is with the alpha channel. Similar to the opacity property, the alpha channel controls how transparent or opaque a color is. 
+	rgba(redValue, greenValue, blueValue, alphaValue);
+*/
+.sleeve{
+	width: 110px;
+	height: 25px;
+	background-color: rgba(255,255,255,0.5);
+	/* The border-left shorthand property lets you to 
+	set the left border's width, style, and color at the
+	same time.
+
+		border-left: width style color;
+	*/
+	border-left:10px double rgba(0,0,0,0.75);
+	/* The box-shadow property lets you apply one or more  
+	shadows around an element. Here is basic syntax:
+		box-shadow: offsetX offsetY blurRadius spreadRadius color;
+	*/
+}
+
+.cap{
+	height: 25px;
+	width: 60px;
+}
+
+.cap,.sleeve{
+	display: inline-block;
+}
